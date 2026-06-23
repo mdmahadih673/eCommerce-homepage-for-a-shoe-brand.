@@ -1,0 +1,6 @@
+{
+  "name": "Aura Premium Shoes",
+  "description": "A premium modern shoe brand eCommerce platform with stunning dark luxury UI, fluid animation, responsive product galleries, and dynamic cart management.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

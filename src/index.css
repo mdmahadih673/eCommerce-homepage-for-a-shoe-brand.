@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,700;0,900;1,400&family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Space Grotesk", "Montserrat", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+  
+  --color-brand-cyan: #06b6d4;
+  --color-brand-orange: #f59e0b;
+  --color-brand-purple: #a855f7;
+  --color-brand-rose: #f43f5e;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: var(--font-sans);
+  background-color: #000000;
+  color: #ffffff;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #000000;
+}
+::-webkit-scrollbar-thumb {
+  background: #222222;
+  border-radius: 99px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #333333;
+}
+
+/* Custom text selection */
+::selection {
+  background: rgba(249, 115, 22, 0.45);
+  color: #ffffff;
+}
+
+/* Glassmorphism utility */
+.glass-panel {
+  background: rgba(5, 5, 5, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-nav {
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* High fidelity shine animations */
+@keyframes slide-shine {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 200%;
+  }
+}
+
+.animate-shine {
+  position: relative;
+  overflow: hidden;
+}
+
+.animate-shine::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.15) 30%,
+    rgba(255, 255, 255, 0.3) 50%,
+    rgba(255, 255, 255, 0.15) 70%,
+    transparent
+  );
+  transform: skewX(-25deg);
+  animation: slide-shine 4s infinite linear;
+}
+
+/* Glow effects */
+.glow-cyan {
+  text-shadow: 0 0 10px rgba(6, 182, 212, 0.5);
+}
+.glow-amber {
+  text-shadow: 0 0 10px rgba(245, 158, 11, 0.5);
+}
+.glow-purple {
+  text-shadow: 0 0 10px rgba(168, 85, 247, 0.5);
+}
+
+.neon-btn-cyan {
+  box-shadow: 0 0 15px rgba(6, 182, 212, 0.3);
+  transition: all 0.3s ease;
+}
+.neon-btn-cyan:hover {
+  box-shadow: 0 0 25px rgba(6, 182, 212, 0.7);
+}
+
+.neon-btn-amber {
+  box-shadow: 0 0 15px rgba(245, 158, 11, 0.3);
+  transition: all 0.3s ease;
+}
+.neon-btn-amber:hover {
+  box-shadow: 0 0 25px rgba(245, 158, 11, 0.7);
+}
+
+.neon-btn-purple {
+  box-shadow: 0 0 15px rgba(168, 85, 247, 0.3);
+  transition: all 0.3s ease;
+}
+.neon-btn-purple:hover {
+  box-shadow: 0 0 25px rgba(168, 85, 247, 0.7);
+}
+
+.neon-btn-rose {
+  box-shadow: 0 0 15px rgba(244, 63, 94, 0.3);
+  transition: all 0.3s ease;
+}
+.neon-btn-rose:hover {
+  box-shadow: 0 0 25px rgba(244, 63, 94, 0.7);
+}
